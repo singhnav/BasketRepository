@@ -22,7 +22,7 @@ public class BasketPricing {
 
         return itemsCounted
                 .entrySet().stream()
-                .collect(toMap(e1 -> e1.getKey(), e1 -> priceFor(e1.getKey(), e1.getValue())))
+                .collect(toMap(e -> e.getKey(), e -> priceFor(e.getKey(), e.getValue())))
                 .entrySet().stream().collect(Collectors.summingDouble(e -> e.getValue()));
 
     }
